@@ -1,0 +1,22 @@
+c:\users\admin\documents\visual studio 2012\Projects\ADONET_L1\ADONET_L1\bin\Debug\ADONET_L1.exe.config
+c:\users\admin\documents\visual studio 2012\Projects\ADONET_L1\ADONET_L1\bin\Debug\ADONET_L1.exe
+c:\users\admin\documents\visual studio 2012\Projects\ADONET_L1\ADONET_L1\bin\Debug\ADONET_L1.pdb
+c:\users\admin\documents\visual studio 2012\Projects\ADONET_L1\ADONET_L1\obj\Debug\ADONET_L1.csprojResolveAssemblyReference.cache
+c:\users\admin\documents\visual studio 2012\Projects\ADONET_L1\ADONET_L1\obj\Debug\ADONET_L1.Properties.Resources.resources
+c:\users\admin\documents\visual studio 2012\Projects\ADONET_L1\ADONET_L1\obj\Debug\ADONET_L1.csproj.GenerateResource.Cache
+c:\users\admin\documents\visual studio 2012\Projects\ADONET_L1\ADONET_L1\obj\Debug\ADONET_L1.exe
+c:\users\admin\documents\visual studio 2012\Projects\ADONET_L1\ADONET_L1\obj\Debug\ADONET_L1.pdb
+c:\users\admin\documents\visual studio 2012\Projects\ADONET_L1\ADONET_L1\obj\Debug\ADONET_L1.Form1.resources
+c:\users\admin\documents\visual studio 2012\Projects\ADONET_L1\ADONET_L1\bin\Debug\SomeData.dll
+c:\users\admin\documents\visual studio 2012\Projects\ADONET_L1\ADONET_L1\bin\Debug\SomeData.pdb
+C:\Users\Admin\Documents\snusshop\SnusShop\ADONET_L1\ADONET_L1\bin\Debug\ADONET_L1.exe.config
+C:\Users\Admin\Documents\snusshop\SnusShop\ADONET_L1\ADONET_L1\obj\Debug\ADONET_L1.exe
+C:\Users\Admin\Documents\snusshop\SnusShop\ADONET_L1\ADONET_L1\obj\Debug\ADONET_L1.pdb
+C:\Users\Admin\Documents\snusshop\SnusShop\ADONET_L1\ADONET_L1\bin\Debug\ADONET_L1.exe
+C:\Users\Admin\Documents\snusshop\SnusShop\ADONET_L1\ADONET_L1\bin\Debug\ADONET_L1.pdb
+C:\Users\Admin\Documents\snusshop\SnusShop\ADONET_L1\ADONET_L1\obj\Debug\ADONET_L1.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\snusshop\SnusShop\ADONET_L1\ADONET_L1\obj\Debug\ADONET_L1.Form1.resources
+C:\Users\Admin\Documents\snusshop\SnusShop\ADONET_L1\ADONET_L1\obj\Debug\ADONET_L1.Properties.Resources.resources
+C:\Users\Admin\Documents\snusshop\SnusShop\ADONET_L1\ADONET_L1\obj\Debug\ADONET_L1.csproj.GenerateResource.Cache
+C:\Users\Admin\Documents\snusshop\SnusShop\ADONET_L1\ADONET_L1\obj\Debug\ADONET_L1.Product_info.resources
+C:\Users\Admin\Documents\snusshop\SnusShop\ADONET_L1\ADONET_L1\obj\Debug\ADONET_L1.Clients.resources

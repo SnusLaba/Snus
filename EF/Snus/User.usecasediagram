@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="9e2233e1-7112-4b23-9e02-887e0d805ae8" name="SnusSite" linkedPackageId="6caedfad-daf6-40bb-89e0-07fbb7807bd4" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="b18c49c4-b434-484d-a948-13007b8b5fd1">
+      <profileInstance Id="5f4ba8ea-7ebf-4411-9ee6-0cad3783cf2a" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="8da98d8c-9930-4369-ad84-fc8992b0d8b5">
+      <profileInstance Id="1b71c5f7-ad65-4ede-9e04-903fd5b65f91" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="e1a6d8fc-1ef5-44fa-8a4c-56410229d5b1" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7c1e5d7d-76e8-4067-87b4-77348292a399" />
+        <targetEnds>
+          <association Id="e94ad2e4-a2f5-4691-a399-54ceeb7c2471" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Операції з елементом-продуктом" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="7d984a8c-23fc-46de-9a46-8e275aa6b56f" LastKnownName="Операції з елементом-продуктом" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="760fbcde-1e45-46cc-b38d-147735907ac5" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7cae076b-8551-4b86-b789-ec6b58076959" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="818f492e-3017-42be-a5c9-1754d0e95cb6" name="Операції з елементом-продуктом" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d1fe2c6c-d289-4320-891f-19a0a3046b0f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0c268c87-d5ad-4ce6-a60f-cbab864287a2" />
+          </association>
+          <association Id="6785dd17-55d7-4e63-8bd5-775498d2bf8f" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Операції з корзиною" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9501dcc6-96f9-46c9-aae1-4cac61082256" LastKnownName="Операції з корзиною" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c7cf70c9-5e9b-4313-963c-fed6f95c4013" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9be6c14b-4227-48b4-b03d-2cd7aa2e0dd4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="72cb5832-d21a-4d29-8d42-457fd88e5588" name="Операції з корзиною" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e807439e-7ce5-478d-9eba-3b16aa22a1fb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2acbd03a-4a56-41f9-955d-a1a1c592efc5" />
+          </association>
+          <association Id="30a75d46-bf92-44e5-a129-261cd0ce07a5" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Взаємодія з адміністрацією" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4f3b34db-f104-47cf-a10b-74a32cd77843" LastKnownName="Взаємодія з адміністрацією" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ff6d58bd-13d9-443d-ae76-f63f8b6663b9" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="cfe85e68-ab52-4895-bb49-42cb233c6eed" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a4706fd7-a0a0-4525-83ac-e946d1d39af1" name="Взаємодія з адміністрацією" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9c151f4c-397d-4833-843d-ccd7aa5c3113" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5bbf0796-f2df-4ba0-a79b-ce574ac2656f" />
+          </association>
+          <association Id="0813a38f-53b0-42fa-a60f-7566cde9e458" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Робота з фільтрами товарів" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="398fb2a4-0f91-47f1-8e2b-ac788c908d88" LastKnownName="Робота з фільтрами товарів" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="40b3d45d-8e8a-47e6-aadd-9815f838648f" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e034ebd0-ed0d-403e-97df-bbd2f0f229b2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f10bfc01-87a4-4435-9f78-733d5a8d5735" name="Робота з фільтрами товарів" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ddceee0a-e022-4655-a056-477c5831d8af" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="be2fc492-ed34-47e8-b312-1d5af4e10bc2" />
+          </association>
+          <association Id="06fc0862-af1d-4fa2-9dae-132e5791a907" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Робота з банківською системою" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8b1e0fb8-44e7-44f2-b159-07751c02a435" LastKnownName="Робота з банківською системою" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="29a27995-3e13-47d2-bd3c-73f824d65ae3" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="afcedb8a-40d4-46ae-b055-08289baf9d7c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b525dc8f-326b-4b73-8179-6e3564589424" name="Робота з банківською системою" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b12e63b4-f4a2-4772-b77b-e9901d8becdd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d286442e-9943-45c4-b86b-e5e9bdabbcc4" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7d984a8c-23fc-46de-9a46-8e275aa6b56f" name="Операції з елементом-продуктом" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6948fb3c-f9df-4fad-a271-df58449504d4" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="81d37d18-2121-49ab-b227-19950a1bddb5" name="Вибрати" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6559a298-5a9b-4bfb-bb09-004717567f2d" />
+        <additions>
+          <include Id="7b0f0014-c33a-43fa-b6c3-a2ec8a6ebe6d">
+            <useCaseMoniker Id="7d984a8c-23fc-46de-9a46-8e275aa6b56f" LastKnownName="Операції з елементом-продуктом" />
+            <elementDefinition Id="774f4bdf-1076-45d6-b1b5-ed7c46019d67" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="63788628-92de-4270-83a4-2f769fa1a450" name="Покласти в корзину. &#xD;&#xA;Забрати з корзини." isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2b50862f-9046-46ce-b514-060df7b0490c" />
+        <additions>
+          <include Id="b5045388-0a89-4be9-8ae9-64114bc13bc3">
+            <useCaseMoniker Id="7d984a8c-23fc-46de-9a46-8e275aa6b56f" LastKnownName="Операції з елементом-продуктом" />
+            <elementDefinition Id="271d6072-6956-48af-a00e-12b5e2656b00" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="fc153145-ba61-4d87-99a6-bb8029839569" name="Залишити коментар" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2925ba5b-ec54-41a5-9bb4-f467beb91cd4" />
+        <additions>
+          <include Id="47394319-f4cb-40ae-9d92-7efddad4f0b2">
+            <useCaseMoniker Id="7d984a8c-23fc-46de-9a46-8e275aa6b56f" LastKnownName="Операції з елементом-продуктом" />
+            <elementDefinition Id="ffa2cc86-6a14-4a1f-99fe-8b95eb64a8a6" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f19c3c61-feb7-4b93-87c9-2b6db90289e6" name="Залишити коментар" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0ca87cec-fe08-4251-a4d8-9ea7df20ad25" />
+        <additions>
+          <include Id="9bb1a4d9-745f-4ad1-a1e3-f2026d49a1f9">
+            <useCaseMoniker Id="fc153145-ba61-4d87-99a6-bb8029839569" LastKnownName="Залишити коментар" />
+            <elementDefinition Id="194a243b-b0a7-4159-a390-74c0ca4cef9c" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0bdeb0e0-cb3c-413d-ade1-e952e598ede2" name="Поставити позитивну оцінку" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3c097f37-19fb-43c0-9efc-f461dbc03213" />
+        <additions>
+          <include Id="5aa4db50-465d-41ad-b6c4-ef72381c73f2">
+            <useCaseMoniker Id="7d984a8c-23fc-46de-9a46-8e275aa6b56f" LastKnownName="Операції з елементом-продуктом" />
+            <elementDefinition Id="3fb6c0dd-79c0-4a58-a125-7170c4bddc1e" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="712b630b-ee2d-4d63-b174-15611d4b962d" name="Поставити негативну оцінку" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="70d27279-88a8-4e75-8861-759e73287c90" />
+        <additions>
+          <include Id="7d232397-9974-43c8-85ae-12372c2803fe">
+            <useCaseMoniker Id="7d984a8c-23fc-46de-9a46-8e275aa6b56f" LastKnownName="Операції з елементом-продуктом" />
+            <elementDefinition Id="4a9ba110-ffa1-43fc-88c7-c7439a0fb5c4" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9501dcc6-96f9-46c9-aae1-4cac61082256" name="Операції з корзиною" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8b29f3c9-3568-4200-a598-0e44b1255ea9" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f9b52ead-045e-47de-ac6e-ace0f9c1b75e" name="Зробити замовлення" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a6dab1f4-0d13-4ea8-a85a-440d021359d8" />
+        <additions>
+          <include Id="c6ad4541-8761-4850-8d58-10122ce398e2">
+            <useCaseMoniker Id="9501dcc6-96f9-46c9-aae1-4cac61082256" LastKnownName="Операції з корзиною" />
+            <elementDefinition Id="39d57b42-6fe2-4afe-9e56-0f6463852816" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c89bd888-79b0-426b-a4a0-8d5b7484d49c" name="Очистити корзину" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c7f235c8-f8cf-4827-962d-e59130e9d81d" />
+        <additions>
+          <include Id="197cabf9-eec2-43e1-b82c-1b9250963676">
+            <useCaseMoniker Id="9501dcc6-96f9-46c9-aae1-4cac61082256" LastKnownName="Операції з корзиною" />
+            <elementDefinition Id="fdac4bbf-d023-4b5d-895d-af3dbf71c70a" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ae39e577-f749-4246-a86a-7e327a3c5683" name="Переглянути історію замовлень" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="78f73fa6-39a5-4588-8cf2-cd2a6ae82a7d" />
+        <additions>
+          <include Id="754f88c8-539b-43fb-9ccf-ef6eacf7672a">
+            <useCaseMoniker Id="9501dcc6-96f9-46c9-aae1-4cac61082256" LastKnownName="Операції з корзиною" />
+            <elementDefinition Id="c929e83e-4bbe-4369-8215-31f1fbc2f8fb" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4f3b34db-f104-47cf-a10b-74a32cd77843" name="Взаємодія з адміністрацією" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="17ec65f0-a243-4f8e-9def-4851d927b4cd" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="306a2b5c-0a25-434e-86e8-a7395588a65b" name="Задати питання" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="29936588-a239-4e55-b2dc-13d441821ed3" />
+        <additions>
+          <include Id="1256cdfa-c3b7-4093-b9f6-323c4f421747">
+            <useCaseMoniker Id="4f3b34db-f104-47cf-a10b-74a32cd77843" LastKnownName="Взаємодія з адміністрацією" />
+            <elementDefinition Id="71cdf6b2-acf0-4fea-9cba-c4c2ee11cf4c" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1e5f63d6-d7de-4caf-90c5-47422f16e592" name="Залишити скаргу" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ba8d5be5-99c9-4699-b3ed-670a729f19b2" />
+        <additions>
+          <include Id="50415b84-5ee8-495f-bc4e-5309bd0cb739">
+            <useCaseMoniker Id="4f3b34db-f104-47cf-a10b-74a32cd77843" LastKnownName="Взаємодія з адміністрацією" />
+            <elementDefinition Id="813352c6-a3f5-4399-a6b9-7a862d17defa" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ce679495-867a-43f4-a0ca-ebc279631aa4" name="Залишити хороший відгук" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2fac6619-a706-4822-8585-ff6361e9e5e5" />
+        <additions>
+          <include Id="552bdbff-d882-47e9-a359-a945db238afe">
+            <useCaseMoniker Id="4f3b34db-f104-47cf-a10b-74a32cd77843" LastKnownName="Взаємодія з адміністрацією" />
+            <elementDefinition Id="387f20d7-f91a-404c-afcd-ccadce7b21e4" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="398fb2a4-0f91-47f1-8e2b-ac788c908d88" name="Робота з фільтрами товарів" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b9fe808b-29d8-4f50-8db5-d365b2653635" />
+        <extendedCases>
+          <extend Id="8aacc61a-c87a-4cfb-981c-f6c633a6926a">
+            <useCaseMoniker Id="ba5c37ff-4ee5-46ff-a1ff-23d04d5b5223" LastKnownName="Фільтрувати" />
+            <elementDefinition Id="451dbdfc-26c4-45d9-8125-606303b127f5" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="be714e20-451a-4e36-9df3-165303daad5e" name="Сортувати" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1da0a677-4839-45d5-b50c-d6612da1eaf9" />
+        <additions>
+          <include Id="0971b5f8-47d4-485e-a7dc-0f106036fffe">
+            <useCaseMoniker Id="398fb2a4-0f91-47f1-8e2b-ac788c908d88" LastKnownName="Робота з фільтрами товарів" />
+            <elementDefinition Id="7e8b04b5-8a8d-4397-a642-76e068f814d6" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ba5c37ff-4ee5-46ff-a1ff-23d04d5b5223" name="Фільтрувати" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="639415ce-a252-4b07-9707-69ce8cc32533" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1dedae0f-f684-4b6f-b189-d27d3739d466" name="За видом" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c59cf819-7e1c-4704-88b0-dee24aaa5a7e" />
+        <additions>
+          <include Id="4f23b69c-8a57-41d4-b247-b90b555c386c">
+            <useCaseMoniker Id="ba5c37ff-4ee5-46ff-a1ff-23d04d5b5223" LastKnownName="Фільтрувати" />
+            <elementDefinition Id="2b8872f2-9888-4e0e-a8fe-10c605235a95" />
+          </include>
+          <include Id="26eedd6e-c810-4099-a672-2e3ec9470303">
+            <useCaseMoniker Id="be714e20-451a-4e36-9df3-165303daad5e" LastKnownName="Сортувати" />
+            <elementDefinition Id="3dc478b8-775d-4111-98ea-e8bd66b95e52" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9e334a49-a7c4-41d6-bca5-06bb695e5da1" name="За ціною" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1368924c-5b5c-4b0b-b568-abcff77586e7" />
+        <additions>
+          <include Id="a24e8e4a-fd21-4ebd-9552-b3d67c3c511b">
+            <useCaseMoniker Id="ba5c37ff-4ee5-46ff-a1ff-23d04d5b5223" LastKnownName="Фільтрувати" />
+            <elementDefinition Id="11c74a52-f016-4799-9efe-0f7e506c9b52" />
+          </include>
+          <include Id="5a0d98f5-6d4e-4783-bafc-4c853485e570">
+            <useCaseMoniker Id="be714e20-451a-4e36-9df3-165303daad5e" LastKnownName="Сортувати" />
+            <elementDefinition Id="42650e36-67f0-42c8-acfe-cb91b6ad1420" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="42c991a1-c28e-44a3-8119-d5f98d28217e" name="За популярністю" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3a2f1221-e143-450c-b028-b7c3eafcedb2" />
+        <additions>
+          <include Id="78d2dc19-2954-444c-9a32-4f012eda0c3b">
+            <useCaseMoniker Id="ba5c37ff-4ee5-46ff-a1ff-23d04d5b5223" LastKnownName="Фільтрувати" />
+            <elementDefinition Id="4abd9f8a-768c-4578-99cb-d1ad3ba980e7" />
+          </include>
+          <include Id="12919751-3e17-42cf-8b59-ddd234817820">
+            <useCaseMoniker Id="be714e20-451a-4e36-9df3-165303daad5e" LastKnownName="Сортувати" />
+            <elementDefinition Id="d2ff3697-725d-4df7-9787-822c21c063c7" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b177230c-328c-40ac-9938-c0113428e4dd" name="За датою виготовлення" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1337e61a-fdd1-4773-8a39-3d455dee710c" />
+        <additions>
+          <include Id="250de7b8-d478-4cf1-a8b4-3900ac97a1e4">
+            <useCaseMoniker Id="ba5c37ff-4ee5-46ff-a1ff-23d04d5b5223" LastKnownName="Фільтрувати" />
+            <elementDefinition Id="6ff59293-42fa-4eae-b665-013026ef9266" />
+          </include>
+          <include Id="a0fe281a-9b16-417a-923b-61a6ba7c44a0">
+            <useCaseMoniker Id="be714e20-451a-4e36-9df3-165303daad5e" LastKnownName="Сортувати" />
+            <elementDefinition Id="02be4f69-6a14-4987-98f3-f28fcf769119" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a71d9ca9-0585-4e77-83e0-b73b48308ede" name="За датою закінчення сроку користування" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3aad485d-a540-400b-b062-91c0e4fe59d6" />
+        <extendedCases>
+          <extend Id="666b1db1-b27e-44c0-8798-cd370a1dc65c">
+            <useCaseMoniker Id="be714e20-451a-4e36-9df3-165303daad5e" LastKnownName="Сортувати" />
+            <elementDefinition Id="91cc8918-b80d-4a28-8fd8-58f137455473" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include Id="8f1f01ff-6d61-4d5d-bf19-c0f1499f2583">
+            <useCaseMoniker Id="ba5c37ff-4ee5-46ff-a1ff-23d04d5b5223" LastKnownName="Фільтрувати" />
+            <elementDefinition Id="0d831785-b025-475b-9f68-80779962f694" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a8ba3461-de56-4b02-99ab-7b95f3acb45f" name="За назвою" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c57e46b6-fccb-495b-a7eb-9eb2a7203131" />
+        <additions>
+          <include Id="168ceb24-ddc0-4a3b-af96-29233e65d59a">
+            <useCaseMoniker Id="be714e20-451a-4e36-9df3-165303daad5e" LastKnownName="Сортувати" />
+            <elementDefinition Id="73f7d4be-aa00-423c-aa27-0c51b329de4d" />
+          </include>
+          <include Id="de2313c2-b247-4e9a-982c-36693824f529">
+            <useCaseMoniker Id="ba5c37ff-4ee5-46ff-a1ff-23d04d5b5223" LastKnownName="Фільтрувати" />
+            <elementDefinition Id="1c3f7049-503e-48b6-87c5-7958534e3b5f" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d3b9329e-f7de-4d43-a48a-2e88bbf80b6f" name="Погодитись" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b5bf94bf-c48e-4c15-a553-41eb2de6e132" />
+        <additions>
+          <include Id="5b569526-e8f1-408b-9618-67b00a611a54">
+            <useCaseMoniker Id="fc153145-ba61-4d87-99a6-bb8029839569" LastKnownName="Залишити коментар" />
+            <elementDefinition Id="e0c70949-97f1-4a1b-96fd-3f40eddaddb8" />
+          </include>
+          <include Id="f80861b9-f330-42c3-b9f6-6ef87f16d53f">
+            <useCaseMoniker Id="f19c3c61-feb7-4b93-87c9-2b6db90289e6" LastKnownName="Залишити коментар" />
+            <elementDefinition Id="f3b1177b-9150-4f01-85a5-901edcb6fd9f" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="6705d82c-d6c8-4d65-95da-cb990f52aeb5" name="Не погодитись" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fe5882c8-a3bd-438a-855c-08a548968fed" />
+        <additions>
+          <include Id="a5f9351e-21e5-4a91-a457-2f7eeaad85eb">
+            <useCaseMoniker Id="fc153145-ba61-4d87-99a6-bb8029839569" LastKnownName="Залишити коментар" />
+            <elementDefinition Id="0d8e1438-6818-4356-88f9-120005e3506c" />
+          </include>
+          <include Id="4cbec83c-ec21-406d-ad43-c5ed20d7dc5c">
+            <useCaseMoniker Id="f19c3c61-feb7-4b93-87c9-2b6db90289e6" LastKnownName="Залишити коментар" />
+            <elementDefinition Id="8318e0b7-7b14-4941-a3a2-d17fef14e028" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8b1e0fb8-44e7-44f2-b159-07751c02a435" name="Робота з банківською системою" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e846f551-a2ad-4309-8ebe-05d398e95174" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="6caedfad-daf6-40bb-89e0-07fbb7807bd4" name="Snus">
+    <elementDefinition Id="8f4a1d65-7067-4616-bc9b-a6c96740a1c5" />
+  </package>
+</useCaseModelRoot>

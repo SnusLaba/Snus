@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="77bb07b4-31c1-4016-8c70-786dcfdf994a" name="Admin" linkedPackageId="c5e42868-3ad2-4d77-b80a-b527b35adf4f" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="74ea1bd2-a207-4303-b3f2-2d7d0749ac08">
+      <profileInstance Id="1775ca43-1294-44e3-9afd-647e04758173" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="08d84349-207a-49c7-b3d0-0bce623fd58d">
+      <profileInstance Id="e94a6c0b-b736-489a-ac3b-b2aac481e170" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="e5621213-1a78-4f96-9999-db7e1c9f7304" name="Admin" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fd5d8ae3-ca3b-45ad-ae2c-e0aa5c025af7" />
+        <targetEnds>
+          <association Id="41e4bc21-3728-4b01-8b9e-3384690768e3" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="Робота з базою даних товарів" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a0e7fdb0-c163-4d23-8a10-0e090a8ab396" LastKnownName="Робота з базою даних товарів" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="98e2beaf-39b7-4f08-ac77-486b9fc13d19" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6b0cf437-01a6-41ad-b2e4-6644e7605be9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e1b7a5db-8796-4b7c-a6f1-5dae79eb9550" name="Робота з базою даних товарів" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="422dfbbb-1f2f-4ef8-84df-a345cc0fbb43" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="24be162e-f7d6-4b68-b515-df00ff5e3ce1" />
+          </association>
+          <association Id="f1a73bbc-0644-49c5-8274-0e05c33d87b8" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="Взаємодія з клієнтом" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="692c2263-9f58-43ae-8e9a-a32d497f51d9" LastKnownName="Взаємодія з клієнтом" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="98dd85df-845d-4865-8598-a511dfb93ca8" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3a979263-9d98-436e-836c-08f69007d8dc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5474618b-7742-45b1-b21b-82f81331489e" name="Взаємодія з клієнтом" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="35d3db83-bcd9-46ca-aa94-a87ffd3ad9dd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e4863505-c708-4582-9e44-caf892600ea8" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a0e7fdb0-c163-4d23-8a10-0e090a8ab396" name="Робота з базою даних товарів" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0e6f2082-50f5-4171-9dfb-2e7d8f7b5095" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d0aed9a5-2e6e-4290-bebc-22084838651b" name="Додати товар" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8a8901c7-9f63-4669-b72e-6f273282570e" />
+        <additions>
+          <include Id="3bfe9629-1fe9-4c8a-bd8c-b07785abf129">
+            <useCaseMoniker Id="a0e7fdb0-c163-4d23-8a10-0e090a8ab396" LastKnownName="Робота з базою даних товарів" />
+            <elementDefinition Id="dbdb701c-8ce2-49d3-b5fe-81c7328e622d" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d39e81cd-7475-4cf4-a073-873b1680edff" name="Змінити інформацію про товар" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cb1e8d5d-45b9-4de1-a98f-0c02c31cf2e4" />
+        <additions>
+          <include Id="04b92b45-aa57-462b-9460-a7631709c18a">
+            <useCaseMoniker Id="a0e7fdb0-c163-4d23-8a10-0e090a8ab396" LastKnownName="Робота з базою даних товарів" />
+            <elementDefinition Id="6efb9fc4-9e45-42d4-8b22-9e321f31d2b0" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a4c3cb5f-8434-476e-9c31-0b4ce5d5252a" name="Видалити товар" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="658e82a6-4cfd-4f20-95b9-2ae2216de7dc" />
+        <additions>
+          <include Id="05040b18-2c9f-41a2-9a07-f9735c2559b7">
+            <useCaseMoniker Id="a0e7fdb0-c163-4d23-8a10-0e090a8ab396" LastKnownName="Робота з базою даних товарів" />
+            <elementDefinition Id="956151f7-b66b-4a96-92cd-4eb7313bf8b8" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="692c2263-9f58-43ae-8e9a-a32d497f51d9" name="Взаємодія з клієнтом" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="99bbd3b4-d0e0-4567-a613-fb11a3886de0" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="11b18cf9-9e86-40b4-9683-1302a7fc8b34" name="Відповісти на запитання" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9b4b5eef-620e-4f61-b971-280047438ad3" />
+        <additions>
+          <include Id="93832095-1381-486a-a53f-ce29f5cb3d4c">
+            <useCaseMoniker Id="692c2263-9f58-43ae-8e9a-a32d497f51d9" LastKnownName="Взаємодія з клієнтом" />
+            <elementDefinition Id="ee7fd6ee-044a-419f-b8e6-8ef3446bf86f" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="03b56ecc-0e58-49e7-a966-b31e00f27c6d" name="Прийняти замовлення" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4995efdf-cd2f-4fc3-885d-e45c3b0f89fc" />
+        <additions>
+          <include Id="a01a8e39-f82a-4d5b-8a5d-86e1bfb03764">
+            <useCaseMoniker Id="692c2263-9f58-43ae-8e9a-a32d497f51d9" LastKnownName="Взаємодія з клієнтом" />
+            <elementDefinition Id="4c98e626-1195-47d9-b769-55ec907364e6" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="579e08ad-ff6a-4628-b43f-9f28f8ca1d0d" name="Підтвердити успішність чи неуспішність замовлення" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="95a77860-a312-46eb-a671-938ef30369c5" />
+        <additions>
+          <include Id="c96cb0b2-99b1-485c-804f-415d649eb16c">
+            <useCaseMoniker Id="692c2263-9f58-43ae-8e9a-a32d497f51d9" LastKnownName="Взаємодія з клієнтом" />
+            <elementDefinition Id="4fc7d9d2-e1de-4b7e-b55c-5275db5850a0" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7722367f-efe2-4684-88c5-e1004ed59a6b" name="Редагувати інформацію про себе та про магазин" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="40b571fe-dcf5-4c78-8c90-65a9416f1bbd" />
+        <additions>
+          <include Id="b9173519-0005-4607-b4cd-6ece545361c7">
+            <useCaseMoniker Id="a0e7fdb0-c163-4d23-8a10-0e090a8ab396" LastKnownName="Робота з базою даних товарів" />
+            <elementDefinition Id="71cd292b-1ad5-49e7-874f-b5795f4be63a" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="36835ac8-bf10-4e68-a8c7-636aac8c08b2" name="Дадаватита редагувати  новини" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d129fce0-2ae6-4271-afdd-db63ca8d257c" />
+        <additions>
+          <include Id="93e03312-a8a8-4e36-9db4-3d3cffce51b4">
+            <useCaseMoniker Id="a0e7fdb0-c163-4d23-8a10-0e090a8ab396" LastKnownName="Робота з базою даних товарів" />
+            <elementDefinition Id="7a270733-b7df-4b29-b3d0-47096ff50b8f" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0cd48366-1c07-4a01-a40d-100c2884a564" name="Встановлювати події" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="09e0d4a4-a738-4c58-9edd-28ca2508b432" />
+        <additions>
+          <include Id="fa76f759-1319-4f7a-a04b-2eb13a6af674">
+            <useCaseMoniker Id="a0e7fdb0-c163-4d23-8a10-0e090a8ab396" LastKnownName="Робота з базою даних товарів" />
+            <elementDefinition Id="1fc56b86-b096-4676-bb41-051163a00452" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="171a6f98-290c-4a05-aae1-9e40c953a5cb" name="Написати клієнту чи іншому адміністратору повідомлення" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4519ddec-0447-4bdf-9c1d-cc22628bc8c2" />
+        <additions>
+          <include Id="83506268-4cf7-4f22-828b-ebc35f3c7ebd">
+            <useCaseMoniker Id="692c2263-9f58-43ae-8e9a-a32d497f51d9" LastKnownName="Взаємодія з клієнтом" />
+            <elementDefinition Id="47490f3d-3274-43dc-9555-26c653d8bb0d" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="c5e42868-3ad2-4d77-b80a-b527b35adf4f" name="Snus">
+    <elementDefinition Id="8f4a1d65-7067-4616-bc9b-a6c96740a1c5" />
+  </package>
+</useCaseModelRoot>

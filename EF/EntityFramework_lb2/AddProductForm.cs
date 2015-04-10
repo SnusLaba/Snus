@@ -38,7 +38,7 @@ namespace EntityFramework_lb2
                     Nicotine = tbNicotine.Text,
                     Count = (int?)nudCount.Value,
                     Price = decimal.Parse(tbPrice.Text),
-                    Type = Repository.Types.FirstOrDefault(x => x.Name == cbType.SelectedItem.ToString()) as ProductType,
+                    Type = cbType.SelectedItem != null ? Repository.Types.FirstOrDefault(x => x.Name == cbType.SelectedItem.ToString()) as ProductType : null,
                     Rating = int.Parse(tbRate.Text),
                     Description = tbDescription.Text
                 };

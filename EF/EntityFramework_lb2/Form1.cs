@@ -69,7 +69,7 @@ namespace EntityFramework_lb2
             using (SnusDb repo = new SnusDb())
             {
                
-                dataGridView1.DataSource = repo.Products.Where(productPred != null ? productPred : x => true).ToList();//.ToModelList(ProductViewModel.Converter);
+                dataGridView1.DataSource = repo.Products.AsExpandable().Where(productPred ?? (x => true)).ToList();//.ToModelList(ProductViewModel.Converter);
                 dataGridView2.DataSource = repo.Users.ToList().ToModelList(ClientViewModel.Converter);
             }
         }
@@ -201,11 +201,11 @@ namespace EntityFramework_lb2
         private void button1_Click_2(object sender, EventArgs e)
         {
             
-            Expression<Func<Product, bool>> predicate = x => x.Id == 5;
-            if(!string.IsNullOrWhiteSpace(tbId.Text))
+            Expression<Func<Product, bool>> predicate = x => true;
+            if (!string.IsNullOrWhiteSpace(tbId.Text))
             {
                 var id = int.Parse(tbId.Text);
-                predicate = predicate.And(x => x.Id == 5);
+                predicate = predicate.And(x => x.Id == id);
             }
 
             if (!string.IsNullOrWhiteSpace(tbName.Text))
@@ -219,7 +219,7 @@ namespace EntityFramework_lb2
             if (nudCountEnd.Value > 0)
             {
                 predicate = predicate.And(x => x.Count <= nudCountEnd.Value);
-            } 
+            }
             if (cbType.SelectedItem != null && !string.IsNullOrWhiteSpace(cbType.SelectedItem.ToString()))
             {
                 predicate = predicate.And(x => x.Type != null && x.Type.Name == cbType.SelectedItem.ToString());

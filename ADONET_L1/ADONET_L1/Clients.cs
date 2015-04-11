@@ -45,5 +45,13 @@ namespace ADONET_L1
         {
 
         }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.CurrentCell.RowIndex >= 0)
+            {
+
+            }
+        }
     }
 }

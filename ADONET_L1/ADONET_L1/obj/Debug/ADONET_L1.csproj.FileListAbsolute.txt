@@ -20,3 +20,14 @@ C:\Users\Admin\Documents\snusshop\SnusShop\ADONET_L1\ADONET_L1\obj\Debug\ADONET_
 C:\Users\Admin\Documents\snusshop\SnusShop\ADONET_L1\ADONET_L1\obj\Debug\ADONET_L1.csproj.GenerateResource.Cache
 C:\Users\Admin\Documents\snusshop\SnusShop\ADONET_L1\ADONET_L1\obj\Debug\ADONET_L1.Product_info.resources
 C:\Users\Admin\Documents\snusshop\SnusShop\ADONET_L1\ADONET_L1\obj\Debug\ADONET_L1.Clients.resources
+C:\Users\Admin\Documents\Snus\ADONET_L1\ADONET_L1\bin\Debug\ADONET_L1.exe.config
+C:\Users\Admin\Documents\Snus\ADONET_L1\ADONET_L1\obj\Debug\ADONET_L1.exe
+C:\Users\Admin\Documents\Snus\ADONET_L1\ADONET_L1\obj\Debug\ADONET_L1.pdb
+C:\Users\Admin\Documents\Snus\ADONET_L1\ADONET_L1\bin\Debug\ADONET_L1.exe
+C:\Users\Admin\Documents\Snus\ADONET_L1\ADONET_L1\bin\Debug\ADONET_L1.pdb
+C:\Users\Admin\Documents\Snus\ADONET_L1\ADONET_L1\obj\Debug\ADONET_L1.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\Snus\ADONET_L1\ADONET_L1\obj\Debug\ADONET_L1.Clients.resources
+C:\Users\Admin\Documents\Snus\ADONET_L1\ADONET_L1\obj\Debug\ADONET_L1.Form1.resources
+C:\Users\Admin\Documents\Snus\ADONET_L1\ADONET_L1\obj\Debug\ADONET_L1.Product_info.resources
+C:\Users\Admin\Documents\Snus\ADONET_L1\ADONET_L1\obj\Debug\ADONET_L1.Properties.Resources.resources
+C:\Users\Admin\Documents\Snus\ADONET_L1\ADONET_L1\obj\Debug\ADONET_L1.csproj.GenerateResource.Cache

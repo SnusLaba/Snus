@@ -1,0 +1,1014 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
+  dslVersion="1.0.0.0"
+  Id="8f4a1d65-7067-4616-bc9b-a6c96740a1c5"
+  name="Snus" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <actor
+        Id="7c1e5d7d-76e8-4067-87b4-77348292a399"
+        name="User"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="0c268c87-d5ad-4ce6-a60f-cbab864287a2"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Операції з елементом-продуктом"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="6948fb3c-f9df-4fad-a271-df58449504d4"
+              LastKnownName="Операції з елементом-продуктом"
+              LastKnownLocation="Snus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7cae076b-8551-4b86-b789-ec6b58076959"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d1fe2c6c-d289-4320-891f-19a0a3046b0f"
+                  name="Операції з елементом-продуктом"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="2acbd03a-4a56-41f9-955d-a1a1c592efc5"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Операції з корзиною"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="8b29f3c9-3568-4200-a598-0e44b1255ea9"
+              LastKnownName="Операції з корзиною"
+              LastKnownLocation="Snus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9be6c14b-4227-48b4-b03d-2cd7aa2e0dd4"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e807439e-7ce5-478d-9eba-3b16aa22a1fb"
+                  name="Операції з корзиною"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="5bbf0796-f2df-4ba0-a79b-ce574ac2656f"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Взаємодія з адміністрацією"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="17ec65f0-a243-4f8e-9def-4851d927b4cd"
+              LastKnownName="Взаємодія з адміністрацією"
+              LastKnownLocation="Snus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cfe85e68-ab52-4895-bb49-42cb233c6eed"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9c151f4c-397d-4833-843d-ccd7aa5c3113"
+                  name="Взаємодія з адміністрацією"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="be2fc492-ed34-47e8-b312-1d5af4e10bc2"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Робота з фільтрами товарів"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b9fe808b-29d8-4f50-8db5-d365b2653635"
+              LastKnownName="Робота з фільтрами товарів"
+              LastKnownLocation="Snus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e034ebd0-ed0d-403e-97df-bbd2f0f229b2"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ddceee0a-e022-4655-a056-477c5831d8af"
+                  name="Робота з фільтрами товарів"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d286442e-9943-45c4-b86b-e5e9bdabbcc4"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Робота з банківською системою"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e846f551-a2ad-4309-8ebe-05d398e95174"
+              LastKnownName="Робота з банківською системою"
+              LastKnownLocation="Snus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="afcedb8a-40d4-46ae-b055-08289baf9d7c"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b12e63b4-f4a2-4772-b77b-e9901d8becdd"
+                  name="Робота з банківською системою"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6948fb3c-f9df-4fad-a271-df58449504d4"
+        name="Операції з елементом-продуктом"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d266a76d-4966-4d19-a522-52ed3874832a"
+        name="UseCase11"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6559a298-5a9b-4bfb-bb09-004717567f2d"
+        name="Вибрати"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="774f4bdf-1076-45d6-b1b5-ed7c46019d67">
+            <useCaseMoniker
+              Id="6948fb3c-f9df-4fad-a271-df58449504d4"
+              LastKnownName="Операції з елементом-продуктом"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2b50862f-9046-46ce-b514-060df7b0490c"
+        name="Покласти в корзину. &#xD;&#xA;Забрати з корзини."
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="271d6072-6956-48af-a00e-12b5e2656b00">
+            <useCaseMoniker
+              Id="6948fb3c-f9df-4fad-a271-df58449504d4"
+              LastKnownName="Операції з елементом-продуктом"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2925ba5b-ec54-41a5-9bb4-f467beb91cd4"
+        name="Залишити коментар"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="ffa2cc86-6a14-4a1f-99fe-8b95eb64a8a6">
+            <useCaseMoniker
+              Id="6948fb3c-f9df-4fad-a271-df58449504d4"
+              LastKnownName="Операції з елементом-продуктом"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0ca87cec-fe08-4251-a4d8-9ea7df20ad25"
+        name="Залишити коментар"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="194a243b-b0a7-4159-a390-74c0ca4cef9c">
+            <useCaseMoniker
+              Id="2925ba5b-ec54-41a5-9bb4-f467beb91cd4"
+              LastKnownName="Залишити коментар"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3c097f37-19fb-43c0-9efc-f461dbc03213"
+        name="Поставити позитивну оцінку"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="3fb6c0dd-79c0-4a58-a125-7170c4bddc1e">
+            <useCaseMoniker
+              Id="6948fb3c-f9df-4fad-a271-df58449504d4"
+              LastKnownName="Операції з елементом-продуктом"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="70d27279-88a8-4e75-8861-759e73287c90"
+        name="Поставити негативну оцінку"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="4a9ba110-ffa1-43fc-88c7-c7439a0fb5c4">
+            <useCaseMoniker
+              Id="6948fb3c-f9df-4fad-a271-df58449504d4"
+              LastKnownName="Операції з елементом-продуктом"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7fa76e57-0b61-4843-a64d-9c2fc8b88206"
+        name="Залишити коментар2"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8b29f3c9-3568-4200-a598-0e44b1255ea9"
+        name="Операції з корзиною"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a6dab1f4-0d13-4ea8-a85a-440d021359d8"
+        name="Зробити замовлення"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="39d57b42-6fe2-4afe-9e56-0f6463852816">
+            <useCaseMoniker
+              Id="8b29f3c9-3568-4200-a598-0e44b1255ea9"
+              LastKnownName="Операції з корзиною"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c7f235c8-f8cf-4827-962d-e59130e9d81d"
+        name="Очистити корзину"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="fdac4bbf-d023-4b5d-895d-af3dbf71c70a">
+            <useCaseMoniker
+              Id="8b29f3c9-3568-4200-a598-0e44b1255ea9"
+              LastKnownName="Операції з корзиною"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="78f73fa6-39a5-4588-8cf2-cd2a6ae82a7d"
+        name="Переглянути історію замовлень"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="c929e83e-4bbe-4369-8215-31f1fbc2f8fb">
+            <useCaseMoniker
+              Id="8b29f3c9-3568-4200-a598-0e44b1255ea9"
+              LastKnownName="Операції з корзиною"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="17ec65f0-a243-4f8e-9def-4851d927b4cd"
+        name="Взаємодія з адміністрацією"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="29936588-a239-4e55-b2dc-13d441821ed3"
+        name="Задати питання"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="71cdf6b2-acf0-4fea-9cba-c4c2ee11cf4c">
+            <useCaseMoniker
+              Id="17ec65f0-a243-4f8e-9def-4851d927b4cd"
+              LastKnownName="Взаємодія з адміністрацією"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ba8d5be5-99c9-4699-b3ed-670a729f19b2"
+        name="Залишити скаргу"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="813352c6-a3f5-4399-a6b9-7a862d17defa">
+            <useCaseMoniker
+              Id="17ec65f0-a243-4f8e-9def-4851d927b4cd"
+              LastKnownName="Взаємодія з адміністрацією"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2fac6619-a706-4822-8585-ff6361e9e5e5"
+        name="Залишити хороший відгук"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="387f20d7-f91a-404c-afcd-ccadce7b21e4">
+            <useCaseMoniker
+              Id="17ec65f0-a243-4f8e-9def-4851d927b4cd"
+              LastKnownName="Взаємодія з адміністрацією"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b9fe808b-29d8-4f50-8db5-d365b2653635"
+        name="Робота з фільтрами товарів"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="451dbdfc-26c4-45d9-8125-606303b127f5">
+            <useCaseMoniker
+              Id="639415ce-a252-4b07-9707-69ce8cc32533"
+              LastKnownName="Фільтрувати"
+              LastKnownLocation="Snus.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1da0a677-4839-45d5-b50c-d6612da1eaf9"
+        name="Сортувати"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="7e8b04b5-8a8d-4397-a642-76e068f814d6">
+            <useCaseMoniker
+              Id="b9fe808b-29d8-4f50-8db5-d365b2653635"
+              LastKnownName="Робота з фільтрами товарів"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="639415ce-a252-4b07-9707-69ce8cc32533"
+        name="Фільтрувати"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c59cf819-7e1c-4704-88b0-dee24aaa5a7e"
+        name="За видом"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="2b8872f2-9888-4e0e-a8fe-10c605235a95">
+            <useCaseMoniker
+              Id="639415ce-a252-4b07-9707-69ce8cc32533"
+              LastKnownName="Фільтрувати"
+              LastKnownLocation="Snus.uml" />
+          </include>
+          <include
+            Id="3dc478b8-775d-4111-98ea-e8bd66b95e52">
+            <useCaseMoniker
+              Id="1da0a677-4839-45d5-b50c-d6612da1eaf9"
+              LastKnownName="Сортувати"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1368924c-5b5c-4b0b-b568-abcff77586e7"
+        name="За ціною"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="11c74a52-f016-4799-9efe-0f7e506c9b52">
+            <useCaseMoniker
+              Id="639415ce-a252-4b07-9707-69ce8cc32533"
+              LastKnownName="Фільтрувати"
+              LastKnownLocation="Snus.uml" />
+          </include>
+          <include
+            Id="42650e36-67f0-42c8-acfe-cb91b6ad1420">
+            <useCaseMoniker
+              Id="1da0a677-4839-45d5-b50c-d6612da1eaf9"
+              LastKnownName="Сортувати"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3a2f1221-e143-450c-b028-b7c3eafcedb2"
+        name="За популярністю"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="4abd9f8a-768c-4578-99cb-d1ad3ba980e7">
+            <useCaseMoniker
+              Id="639415ce-a252-4b07-9707-69ce8cc32533"
+              LastKnownName="Фільтрувати"
+              LastKnownLocation="Snus.uml" />
+          </include>
+          <include
+            Id="d2ff3697-725d-4df7-9787-822c21c063c7">
+            <useCaseMoniker
+              Id="1da0a677-4839-45d5-b50c-d6612da1eaf9"
+              LastKnownName="Сортувати"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1337e61a-fdd1-4773-8a39-3d455dee710c"
+        name="За датою виготовлення"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="6ff59293-42fa-4eae-b665-013026ef9266">
+            <useCaseMoniker
+              Id="639415ce-a252-4b07-9707-69ce8cc32533"
+              LastKnownName="Фільтрувати"
+              LastKnownLocation="Snus.uml" />
+          </include>
+          <include
+            Id="02be4f69-6a14-4987-98f3-f28fcf769119">
+            <useCaseMoniker
+              Id="1da0a677-4839-45d5-b50c-d6612da1eaf9"
+              LastKnownName="Сортувати"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3aad485d-a540-400b-b062-91c0e4fe59d6"
+        name="За датою закінчення сроку користування"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="91cc8918-b80d-4a28-8fd8-58f137455473">
+            <useCaseMoniker
+              Id="1da0a677-4839-45d5-b50c-d6612da1eaf9"
+              LastKnownName="Сортувати"
+              LastKnownLocation="Snus.uml" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include
+            Id="0d831785-b025-475b-9f68-80779962f694">
+            <useCaseMoniker
+              Id="639415ce-a252-4b07-9707-69ce8cc32533"
+              LastKnownName="Фільтрувати"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c57e46b6-fccb-495b-a7eb-9eb2a7203131"
+        name="За назвою"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="73f7d4be-aa00-423c-aa27-0c51b329de4d">
+            <useCaseMoniker
+              Id="1da0a677-4839-45d5-b50c-d6612da1eaf9"
+              LastKnownName="Сортувати"
+              LastKnownLocation="Snus.uml" />
+          </include>
+          <include
+            Id="1c3f7049-503e-48b6-87c5-7958534e3b5f">
+            <useCaseMoniker
+              Id="639415ce-a252-4b07-9707-69ce8cc32533"
+              LastKnownName="Фільтрувати"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="911f45fc-e1c4-4c06-8945-a8cfd2d6a9c0"
+        name="За ціною"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a66bf6ef-37fc-4c8e-8ba5-c56152e7744d"
+        name="UseCase1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b5bf94bf-c48e-4c15-a553-41eb2de6e132"
+        name="Погодитись"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="e0c70949-97f1-4a1b-96fd-3f40eddaddb8">
+            <useCaseMoniker
+              Id="2925ba5b-ec54-41a5-9bb4-f467beb91cd4"
+              LastKnownName="Залишити коментар"
+              LastKnownLocation="Snus.uml" />
+          </include>
+          <include
+            Id="f3b1177b-9150-4f01-85a5-901edcb6fd9f">
+            <useCaseMoniker
+              Id="0ca87cec-fe08-4251-a4d8-9ea7df20ad25"
+              LastKnownName="Залишити коментар"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fe5882c8-a3bd-438a-855c-08a548968fed"
+        name="Не погодитись"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="0d8e1438-6818-4356-88f9-120005e3506c">
+            <useCaseMoniker
+              Id="2925ba5b-ec54-41a5-9bb4-f467beb91cd4"
+              LastKnownName="Залишити коментар"
+              LastKnownLocation="Snus.uml" />
+          </include>
+          <include
+            Id="8318e0b7-7b14-4941-a3a2-d17fef14e028">
+            <useCaseMoniker
+              Id="0ca87cec-fe08-4251-a4d8-9ea7df20ad25"
+              LastKnownName="Залишити коментар"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e846f551-a2ad-4309-8ebe-05d398e95174"
+        name="Робота з банківською системою"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="fd5d8ae3-ca3b-45ad-ae2c-e0aa5c025af7"
+        name="Admin"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="24be162e-f7d6-4b68-b515-df00ff5e3ce1"
+            isDerived="false"
+            sourceEndRoleName="Admin"
+            targetEndRoleName="Робота з базою даних товарів"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="0e6f2082-50f5-4171-9dfb-2e7d8f7b5095"
+              LastKnownName="Робота з базою даних товарів"
+              LastKnownLocation="Snus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6b0cf437-01a6-41ad-b2e4-6644e7605be9"
+                  name="Admin"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="422dfbbb-1f2f-4ef8-84df-a345cc0fbb43"
+                  name="Робота з базою даних товарів"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e4863505-c708-4582-9e44-caf892600ea8"
+            isDerived="false"
+            sourceEndRoleName="Admin"
+            targetEndRoleName="Взаємодія з клієнтом"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="99bbd3b4-d0e0-4567-a613-fb11a3886de0"
+              LastKnownName="Взаємодія з клієнтом"
+              LastKnownLocation="Snus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3a979263-9d98-436e-836c-08f69007d8dc"
+                  name="Admin"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="35d3db83-bcd9-46ca-aa94-a87ffd3ad9dd"
+                  name="Взаємодія з клієнтом"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0e6f2082-50f5-4171-9dfb-2e7d8f7b5095"
+        name="Робота з базою даних товарів"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8a8901c7-9f63-4669-b72e-6f273282570e"
+        name="Додати товар"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="dbdb701c-8ce2-49d3-b5fe-81c7328e622d">
+            <useCaseMoniker
+              Id="0e6f2082-50f5-4171-9dfb-2e7d8f7b5095"
+              LastKnownName="Робота з базою даних товарів"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="cb1e8d5d-45b9-4de1-a98f-0c02c31cf2e4"
+        name="Змінити інформацію про товар"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="6efb9fc4-9e45-42d4-8b22-9e321f31d2b0">
+            <useCaseMoniker
+              Id="0e6f2082-50f5-4171-9dfb-2e7d8f7b5095"
+              LastKnownName="Робота з базою даних товарів"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="658e82a6-4cfd-4f20-95b9-2ae2216de7dc"
+        name="Видалити товар"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="956151f7-b66b-4a96-92cd-4eb7313bf8b8">
+            <useCaseMoniker
+              Id="0e6f2082-50f5-4171-9dfb-2e7d8f7b5095"
+              LastKnownName="Робота з базою даних товарів"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="99bbd3b4-d0e0-4567-a613-fb11a3886de0"
+        name="Взаємодія з клієнтом"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9b4b5eef-620e-4f61-b971-280047438ad3"
+        name="Відповісти на запитання"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="ee7fd6ee-044a-419f-b8e6-8ef3446bf86f">
+            <useCaseMoniker
+              Id="99bbd3b4-d0e0-4567-a613-fb11a3886de0"
+              LastKnownName="Взаємодія з клієнтом"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4995efdf-cd2f-4fc3-885d-e45c3b0f89fc"
+        name="Прийняти замовлення"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="4c98e626-1195-47d9-b769-55ec907364e6">
+            <useCaseMoniker
+              Id="99bbd3b4-d0e0-4567-a613-fb11a3886de0"
+              LastKnownName="Взаємодія з клієнтом"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="95a77860-a312-46eb-a671-938ef30369c5"
+        name="Підтвердити успішність чи неуспішність замовлення"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="4fc7d9d2-e1de-4b7e-b55c-5275db5850a0">
+            <useCaseMoniker
+              Id="99bbd3b4-d0e0-4567-a613-fb11a3886de0"
+              LastKnownName="Взаємодія з клієнтом"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="40b571fe-dcf5-4c78-8c90-65a9416f1bbd"
+        name="Редагувати інформацію про себе та про магазин"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="71cd292b-1ad5-49e7-874f-b5795f4be63a">
+            <useCaseMoniker
+              Id="0e6f2082-50f5-4171-9dfb-2e7d8f7b5095"
+              LastKnownName="Робота з базою даних товарів"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d129fce0-2ae6-4271-afdd-db63ca8d257c"
+        name="Дадаватита редагувати  новини"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="7a270733-b7df-4b29-b3d0-47096ff50b8f">
+            <useCaseMoniker
+              Id="0e6f2082-50f5-4171-9dfb-2e7d8f7b5095"
+              LastKnownName="Робота з базою даних товарів"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="09e0d4a4-a738-4c58-9edd-28ca2508b432"
+        name="Встановлювати події"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="1fc56b86-b096-4676-bb41-051163a00452">
+            <useCaseMoniker
+              Id="0e6f2082-50f5-4171-9dfb-2e7d8f7b5095"
+              LastKnownName="Робота з базою даних товарів"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4519ddec-0447-4bdf-9c1d-cc22628bc8c2"
+        name="Написати клієнту чи іншому адміністратору повідомлення"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="47490f3d-3274-43dc-9555-26c653d8bb0d">
+            <useCaseMoniker
+              Id="99bbd3b4-d0e0-4567-a613-fb11a3886de0"
+              LastKnownName="Взаємодія з клієнтом"
+              LastKnownLocation="Snus.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

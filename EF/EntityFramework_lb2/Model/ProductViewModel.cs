@@ -24,7 +24,7 @@ namespace EntityFramework_lb2.Model
         public string Description { get; set; }
         public int? Count { get; set; }
         public string Type { get; set; }
-        public string Nicotine { get; set; }
+        public int Nicotine { get; set; }
         public int? Rating { get; set; }
     }
 }

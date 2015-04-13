@@ -79,6 +79,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="List.cs" />
+    <Compile Include="Managers\FilterManager.cs" />
     <Compile Include="Model\ClientViewModel.cs" />
     <Compile Include="Model\ProductViewModel.cs" />
     <Compile Include="Program.cs" />

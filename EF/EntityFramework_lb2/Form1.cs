@@ -15,6 +15,7 @@ using System.Data.Entity.Core.Objects;
 using EntityFramework_lb2.Model;
 using System.Linq.Expressions;
 using LinqKit;
+using EntityFramework_lb2.Managers;
 
 namespace EntityFramework_lb2
 {
@@ -64,13 +65,13 @@ namespace EntityFramework_lb2
             ReloadTable();
         }
 
-        private void ReloadTable(Expression<Func<Product, bool>> productPred = null)
+        private void ReloadTable(Expression<Func<Product, bool>> productPred = null, Expression<Func<Users, bool>> usersPred = null)
         {
             using (SnusDb repo = new SnusDb())
             {
                
-                dataGridView1.DataSource = repo.Products.AsExpandable().Where(productPred ?? (x => true)).ToList();//.ToModelList(ProductViewModel.Converter);
-                dataGridView2.DataSource = repo.Users.ToList().ToModelList(ClientViewModel.Converter);
+                dataGridView1.DataSource = repo.Products.AsExpandable().Where(productPred ?? (x => true)).ToList().ToModelList(ProductViewModel.Converter);
+                dataGridView2.DataSource = repo.Users.AsExpandable().Where(usersPred ?? (x => true)).ToList().ToModelList(ClientViewModel.Converter);
             }
         }
 
@@ -79,31 +80,7 @@ namespace EntityFramework_lb2
             return new BindingList<T>(list);
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            using (SnusDb repo = new SnusDb())
-            {
-                var list = ((BindingList<Product>)dataGridView1.DataSource).ToList();
-                foreach (var item in list)
-                {
-                    bool flag = true;
-                    foreach (var itemDb in repo.Products.ToList())
-                    {
-                        if (item.Name == itemDb.Name)
-                        {
-                            flag = false;
-                            break;
-                        }
-                    }
-                    if (flag)
-                    {
-                        repo.Products.Add(item);
-                    }
-                }
-                repo.Save();
-                dataGridView1.DataSource = GetBList(repo.Products.ToList());
-            }
-        }
+       
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -183,76 +160,59 @@ namespace EntityFramework_lb2
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click_2(object sender, EventArgs e)
         {
+            var predicate = FilterManager.GetFilterPredicate<Product>(new 
+            {
+                id = tbId.Text, 
+                name = tbName.Text,
+                description = tbDescription.Text,
+                countStart = (int)nudCountStart.Value,
+                countEnd = (int)nudCountEnd.Value,
+                type = cbType.SelectedItem,
+                priceStart = nudPriceStart.Value,
+                priceEnd = nudPriceEnd.Value,
+                nicotineStart = (int)nudNicotineStart.Value,
+                nicotineEnd = (int)nudNicotineEnd.Value,
+                ratingStart = (int)nudRateStart.Value,
+                ratingEnd = (int)nudRateEnd.Value
+            });
             
-            Expression<Func<Product, bool>> predicate = x => true;
-            if (!string.IsNullOrWhiteSpace(tbId.Text))
-            {
-                var id = int.Parse(tbId.Text);
-                predicate = predicate.And(x => x.Id == id);
-            }
-
-            if (!string.IsNullOrWhiteSpace(tbName.Text))
-            {
-                predicate = predicate.And(x => x.Name.Contains(tbName.Text));
-            }
-            if (nudCountStart.Value > 0)
-            {
-                predicate = predicate.And(x => x.Count >= nudCountStart.Value);
-            }
-            if (nudCountEnd.Value > 0)
-            {
-                predicate = predicate.And(x => x.Count <= nudCountEnd.Value);
-            }
-            if (cbType.SelectedItem != null && !string.IsNullOrWhiteSpace(cbType.SelectedItem.ToString()))
-            {
-                predicate = predicate.And(x => x.Type != null && x.Type.Name == cbType.SelectedItem.ToString());
-            }
-            if (!string.IsNullOrWhiteSpace(tbPriceStart.Text) && Extension.DecimalTryParce(tbPriceStart.Text))
-            {
-                predicate = predicate.And(x => x.Price >= decimal.Parse(tbPriceStart.Text));
-            }
-            if (!string.IsNullOrWhiteSpace(tbPriceEnd.Text) && Extension.DecimalTryParce(tbPriceEnd.Text))
-            {
-                predicate = predicate.And(x => x.Price <= decimal.Parse(tbPriceEnd.Text));
-            }
-            if (!string.IsNullOrWhiteSpace(tbNicotineStart.Text) && Extension.IntTryParce(tbNicotineStart.Text))
-            {
-                predicate = predicate.And(x => int.Parse(x.Nicotine) >= int.Parse(tbNicotineStart.Text));
-            }
-            if (!string.IsNullOrWhiteSpace(tbNicotineEnd.Text) && Extension.DecimalTryParce(tbNicotineEnd.Text))
-            {
-                predicate = predicate.And(x => int.Parse(x.Nicotine) <= int.Parse(tbNicotineEnd.Text));
-            }
-            if (!string.IsNullOrWhiteSpace(tbRateStart.Text) && Extension.IntTryParce(tbRateStart.Text))
-            {
-                predicate = predicate.And(x => x.Rating >= int.Parse(tbRateStart.Text));
-            }
-            if (!string.IsNullOrWhiteSpace(tbRateStart.Text) && Extension.DecimalTryParce(tbRateStart.Text))
-            {
-                predicate = predicate.And(x => x.Rating <= int.Parse(tbRateStart.Text));
-            }
-            if (!string.IsNullOrWhiteSpace(tbDescription.Text))
-            {
-                predicate = predicate.And(x => x.Description.Contains(tbDescription.Text));
-            }
             ReloadTable(predicate);
+        }
+
+       
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var predicate = FilterManager.GetFilterPredicate<Users>(new
+            {
+                id = tbId2.Text,
+                firstName = tbFirstName.Text,
+                secondName = tbSecondName.Text,
+                ageStart = (Nullable<int>)nudAgeStart.Value,
+                ageEnd = (Nullable<int>)nudAgeEnd.Value,
+                role = cbRole.SelectedItem !=null ? cbRole.SelectedItem.ToString() : null,
+                sex = tbSex.Text,
+                email = tbEmail.Text
+            });
+            ReloadTable(null, predicate);
         }        
     }
 }

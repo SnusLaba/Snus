@@ -42,6 +42,15 @@ namespace EntityFramework_lb2
             int res;
             return int.TryParse(text, out res);
         }
+        public static int Parce(this string a, int defaultVal)
+        {
+            int res;
+            if(int.TryParse(a, out res))
+            {
+                return res;
+            }
+            return defaultVal;
+        }
         private class ExpressionParameterReplacer : ExpressionVisitor
         {
             public ExpressionParameterReplacer(IList<ParameterExpression> fromParameters, IList<ParameterExpression> toParameters)

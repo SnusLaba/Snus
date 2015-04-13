@@ -1,8 +1,10 @@
+using SnusData.Attributes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.Spatial;
+
 
 namespace SnusData.Entitys
 {
@@ -13,31 +15,40 @@ namespace SnusData.Entitys
         }
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        [Filter(FilterFlag.ContainsFilterIn, "id")]
+        public int Id {get;set;}
 
         [Required]
         [StringLength(10)]
+        [Filter(FilterFlag.ContainsFilterIn, "firstName")]
         public string FirstName { get; set; }
 
         
         [StringLength(10)]
+        [Filter(FilterFlag.ContainsFilterIn, "secondName")]
         public string SecondName { get; set; }
 
         
-        [StringLength(10)]
-        public string Age { get; set; }
+        
+        [Filter(FilterFlag.IntervalStart, "ageStart")]
+        [Filter(FilterFlag.IntervalEnd, "ageEnd")]
+        public int Age { get; set; }
 
+        [Filter(FilterFlag.Equal, "role")]
         public virtual Roles Role { get; set; }
 
         [StringLength(10)]
+        [Filter(FilterFlag.ContainsFilterIn, "sex")]
         public string Sex { get; set; }
 
        
         [StringLength(10)]
+        [Filter(FilterFlag.ContainsFilterIn, "email")]
         public string Email { get; set; }
 
    
         [StringLength(10)]
+        [Filter(FilterFlag.ContainsFilterIn, "password")]
         public string Password { get; set; }
 
         public virtual Locations Location { get; set; }

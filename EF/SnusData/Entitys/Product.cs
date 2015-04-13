@@ -1,3 +1,4 @@
+using SnusData.Attributes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -9,23 +10,34 @@ namespace SnusData.Entitys
 
     public partial class Product
     {
+        [Filter(FilterFlag.ContainsFilterIn, "id")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Required]
         [StringLength(10)]
+        [Filter(FilterFlag.ContainsFilterIn, "name")]
         public string Name { get; set; }
 
+        [Filter(FilterFlag.ContainsFilterIn, "description")]
         [StringLength(10)]
         public string Description { get; set; }
 
-        public int? Count { get; set; }
+        [Filter(FilterFlag.IntervalStart, "countStart")]
+        [Filter(FilterFlag.IntervalEnd, "countEnd")]
+        public int Count { get; set; }
 
+        [Filter(FilterFlag.Equal, "type")]
         public virtual ProductType Type { get; set; }
+        [Filter(FilterFlag.IntervalStart, "priceStart")]
+        [Filter(FilterFlag.IntervalEnd, "priceEnd")]
         public decimal Price { get; set; }
-        [StringLength(10)]
-        public string Nicotine { get; set; }
-        public int? Rating { get; set; }
+        [Filter(FilterFlag.IntervalStart, "nicotineStart")]
+        [Filter(FilterFlag.IntervalEnd, "nicotineEnd")]
+        public int Nicotine { get; set; }
+        [Filter(FilterFlag.IntervalStart, "ratingStart")]
+        [Filter(FilterFlag.IntervalEnd, "ratingEnd")]
+        public int Rating { get; set; }
         public virtual ICollection<Coments> Coments { get; set; }
 
         public virtual ICollection<File> File { get; set; }

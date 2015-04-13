@@ -31,7 +31,7 @@ namespace EntityFramework_lb2
                 {
                     FirstName = tbFirstName.Text,
                     SecondName = tbSecondName.Text,
-                    Age = tbAge.Text,
+                    Age = tbAge.Text.Parce(0),
                     Email = tbEmail.Text,
                     Role = cbRole.SelectedItem != null ? Repository.Roles.FirstOrDefault(x => x.Name == cbRole.SelectedItem.ToString()) : null,
                     Sex = tbSex.Text

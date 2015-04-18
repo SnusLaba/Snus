@@ -50,3 +50,8 @@ E:\AllProject\SnusSiteTeam\Snus\EF\SnusData\obj\Debug\SnusData.csprojResolveAsse
 E:\AllProject\SnusSiteTeam\Snus\EF\SnusData\obj\Debug\SnusData.Migrations.v8.resources
 E:\AllProject\SnusSiteTeam\Snus\EF\SnusData\obj\Debug\SnusData.Migrations.v9.resources
 E:\AllProject\SnusSiteTeam\Snus\EF\SnusData\obj\Debug\SnusData.Migrations.v10.resources
+E:\AllProject\SnusSiteTeam\Snus\EF\SnusData\obj\Debug\SnusData.Migrations.v11.resources
+E:\AllProject\SnusSiteTeam\Snus\EF\SnusData\obj\Debug\SnusData.Migrations.v12.resources
+E:\AllProject\SnusSiteTeam\Snus\EF\SnusData\obj\Debug\SnusData.Migrations.v13.resources
+E:\AllProject\SnusSiteTeam\Snus\EF\SnusData\obj\Debug\SnusData.Migrations.v14.resources
+E:\AllProject\SnusSiteTeam\Snus\EF\SnusData\obj\Debug\SnusData.Migrations.v15.resources

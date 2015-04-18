@@ -31,8 +31,9 @@ namespace EntityFramework_lb2.Managers
 
                 Expression<Func<T, bool>> lambda = null;
                 var propAttr = Expression.PropertyOrField(xPar, attribute.propInfo.Name);
-                var rightExp = Expression.Constant(prop.GetValue(obj));
-                if (rightExp == null || rightExp.Value == null || rightExp.Value.ToString() == "" || rightExp.Value.ToString() == "-1")
+                var rightExpObj = prop.GetValue(obj);
+                var rightExpConst = Expression.Constant(prop.GetValue(obj));
+                if (rightExpConst == null || rightExpConst.Value == null || rightExpConst.Value.ToString() == "" || rightExpConst.Value.ToString() == "-1")
                     continue;
                 switch(attribute.filter.Flag)
                 {
@@ -47,34 +48,42 @@ namespace EntityFramework_lb2.Managers
                             {
                                 toString = propAttr;
                             }
-                            var contain = Expression.Call(toString, "Contains", null, rightExp);
+                            var contain = Expression.Call(toString, "Contains", null, rightExpConst);
                             lambda = Expression.Lambda<Func<T, bool>>(contain, xPar);
                             break;
                         }
                     case FilterFlag.Equal:
                         {
-                            if (propAttr.Type == rightExp.Type)
-                                lambda = Expression.Lambda<Func<T, bool>>(Expression.Equal(propAttr, rightExp), xPar);
-                            else
+                            if (propAttr.Type == rightExpConst.Type)
+                                lambda = Expression.Lambda<Func<T, bool>>(Expression.Equal(propAttr, rightExpConst), xPar);
+                            else if (propAttr.Type.IsValueType)
                             {
                                 Expression propAttrStr = ExpToString(propAttr);
-                                Expression rightExpStr = ExpToString(rightExp);
+                                Expression rightExpStr = ExpToString(rightExpConst);
                                 lambda = Expression.Lambda<Func<T, bool>>(Expression.Equal(propAttrStr, rightExpStr), xPar);
                             }
                             break;
                         }
                     case FilterFlag.IntervalStart:
                         {
-                            if (propAttr.Type == rightExp.Type)
+                            if (propAttr.Type == rightExpConst.Type)
                             {
-                                lambda = Expression.Lambda<Func<T, bool>>(Expression.GreaterThanOrEqual(propAttr, rightExp), xPar);
+                                lambda = Expression.Lambda<Func<T, bool>>(Expression.GreaterThanOrEqual(propAttr, rightExpConst), xPar);
                             }
                             break;
                         }
                     case FilterFlag.IntervalEnd:
                         {
-                            if (propAttr.Type == rightExp.Type)
-                                lambda = Expression.Lambda<Func<T, bool>>(Expression.LessThanOrEqual(propAttr, rightExp), xPar);
+                            if (propAttr.Type == rightExpConst.Type)
+                                lambda = Expression.Lambda<Func<T, bool>>(Expression.LessThanOrEqual(propAttr, rightExpConst), xPar);
+                            break;
+                        }
+                    case FilterFlag.Down:
+                        {
+                            var expr = GetFilterPredicate<SnusData.Entitys.Type>(rightExpObj);
+                            var body = expr.Body;
+                            var a = Expression.Lambda<Func<T, bool>>(body, xPar);
+
                             break;
                         }
                 }
@@ -98,7 +107,7 @@ namespace EntityFramework_lb2.Managers
 
         public static Expression ExpToString(Expression instance)
         {
-            if(instance.Type != typeof(string))
+            if(instance.Type.IsValueType && instance.Type != typeof(string))
                 return Expression.Call(instance, "ToString", null, null);
             return instance;
         }

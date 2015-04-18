@@ -49,3 +49,4 @@ E:\AllProject\SnusSiteTeam\Snus\EF\EntityFramework_lb2\bin\Debug\EntityFramework
 E:\AllProject\SnusSiteTeam\Snus\EF\EntityFramework_lb2\obj\Debug\EntityFramework_lb2.csprojResolveAssemblyReference.cache
 E:\AllProject\SnusSiteTeam\Snus\EF\EntityFramework_lb2\obj\Debug\EntityFramework_lb2.exe
 E:\AllProject\SnusSiteTeam\Snus\EF\EntityFramework_lb2\obj\Debug\EntityFramework_lb2.pdb
+E:\AllProject\SnusSiteTeam\Snus\EF\EntityFramework_lb2\obj\Debug\EntityFramework_lb2.AddCommentsForm.resources

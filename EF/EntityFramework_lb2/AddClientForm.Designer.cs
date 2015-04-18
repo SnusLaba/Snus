@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.tbEmail = new System.Windows.Forms.TextBox();
@@ -42,31 +40,17 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tbSex = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.cbRole = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbTelephone = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.tbAddress = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(137, 313);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "New Order";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 168);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(257, 125);
-            this.dataGridView1.TabIndex = 20;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(56, 313);
+            this.button1.Location = new System.Drawing.Point(73, 262);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 19;
@@ -164,35 +148,70 @@
             this.tbSex.Size = new System.Drawing.Size(130, 20);
             this.tbSex.TabIndex = 24;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 152);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 13);
-            this.label7.TabIndex = 26;
-            this.label7.Text = "Orders";
-            // 
             // cbRole
             // 
             this.cbRole.FormattingEnabled = true;
-            this.cbRole.Location = new System.Drawing.Point(15, 121);
+            this.cbRole.Location = new System.Drawing.Point(10, 121);
             this.cbRole.Name = "cbRole";
             this.cbRole.Size = new System.Drawing.Size(121, 21);
             this.cbRole.TabIndex = 27;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(18, 161);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(45, 13);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "Address";
+            // 
+            // tbTelephone
+            // 
+            this.tbTelephone.Location = new System.Drawing.Point(12, 227);
+            this.tbTelephone.Name = "tbTelephone";
+            this.tbTelephone.Size = new System.Drawing.Size(263, 20);
+            this.tbTelephone.TabIndex = 31;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(18, 211);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(58, 13);
+            this.label9.TabIndex = 30;
+            this.label9.Text = "Telephone";
+            // 
+            // tbAddress
+            // 
+            this.tbAddress.Location = new System.Drawing.Point(12, 177);
+            this.tbAddress.Name = "tbAddress";
+            this.tbAddress.Size = new System.Drawing.Size(263, 20);
+            this.tbAddress.TabIndex = 32;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(154, 262);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 33;
+            this.button2.Text = "Cancel";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // AddClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 340);
+            this.ClientSize = new System.Drawing.Size(286, 297);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.tbAddress);
+            this.Controls.Add(this.tbTelephone);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.cbRole);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbSex);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbEmail);
@@ -204,7 +223,6 @@
             this.Controls.Add(this.tbFirstName);
             this.Name = "AddClientForm";
             this.Text = "AddClientForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,8 +230,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbEmail;
@@ -226,7 +242,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbSex;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbRole;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tbTelephone;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox tbAddress;
+        private System.Windows.Forms.Button button2;
     }
 }

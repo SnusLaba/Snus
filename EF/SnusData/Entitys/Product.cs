@@ -15,19 +15,18 @@ namespace SnusData.Entitys
         public int Id { get; set; }
 
         [Required]
-        [StringLength(10)]
         [Filter(FilterFlag.ContainsFilterIn, "name")]
         public string Name { get; set; }
 
         [Filter(FilterFlag.ContainsFilterIn, "description")]
-        [StringLength(10)]
+        
         public string Description { get; set; }
 
         [Filter(FilterFlag.IntervalStart, "countStart")]
         [Filter(FilterFlag.IntervalEnd, "countEnd")]
         public int Count { get; set; }
 
-        [Filter(FilterFlag.Equal, "type")]
+        [Filter(FilterFlag.Down, "type")]
         public virtual ProductType Type { get; set; }
         [Filter(FilterFlag.IntervalStart, "priceStart")]
         [Filter(FilterFlag.IntervalEnd, "priceEnd")]

@@ -11,14 +11,11 @@ namespace SnusData.Entitys
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        public int Country_Id { get; set; }
-        public virtual Country Country { get; set; }
-
         
-        [StringLength(10)]
+        
         public string Address { get; set; }
 
-        [StringLength(10)]
+        
         public string Telephone { get; set; }
     }
 }

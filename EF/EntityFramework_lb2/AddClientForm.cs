@@ -34,7 +34,8 @@ namespace EntityFramework_lb2
                     Age = tbAge.Text.Parce(0),
                     Email = tbEmail.Text,
                     Role = cbRole.SelectedItem != null ? Repository.Roles.FirstOrDefault(x => x.Name == cbRole.SelectedItem.ToString()) : null,
-                    Sex = tbSex.Text
+                    Sex = tbSex.Text,
+                    Location = new Locations() { Address = tbAddress.Text, Telephone = tbTelephone.Text }
                 };
                 Repository.Users.Add(client);
                 Repository.Save();
@@ -50,6 +51,16 @@ namespace EntityFramework_lb2
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Close();
         }
 
     }

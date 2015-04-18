@@ -19,8 +19,8 @@ namespace EntityFramework_lb2.Model
             Sex = x.Sex,
             Email = x.Email,
             Password = x.Password,
-            Location = x.Location != null ? string.Format("City: {0}, Country {1}, Address: {2}, Telephone: {3}",
-                            x.Location.Country.City.Name, x.Location.Country, x.Location.Address, x.Location.Telephone) : "<-none Location->"
+            Location = x.Location != null ? string.Format("Address: {0}, Telephone: {1}",
+                            x.Location.Address, x.Location.Telephone) : "<-none Location->"
         };
         public int Id { get; set; }
         public string FirstName { get; set; }

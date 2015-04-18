@@ -25,12 +25,6 @@ namespace EntityFramework_lb2
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             using (SnusDb repo = new SnusDb())
@@ -56,15 +50,11 @@ namespace EntityFramework_lb2
                 repo.Save();
                 dataGridView2.DataSource = GetBList(repo.Users.ToList());
             }
-        }
-
-        
-
+        }             
         private void Form1_Load(object sender, EventArgs e)
         {
             ReloadTable();
         }
-
         private void ReloadTable(Expression<Func<Product, bool>> productPred = null, Expression<Func<Users, bool>> usersPred = null)
         {
             using (SnusDb repo = new SnusDb())
@@ -74,33 +64,26 @@ namespace EntityFramework_lb2
                 dataGridView2.DataSource = repo.Users.AsExpandable().Where(usersPred ?? (x => true)).ToList().ToModelList(ClientViewModel.Converter);
             }
         }
-
         private BindingList<T> GetBList<T>(List<T> list)
         {
             return new BindingList<T>(list);
         }
-
-       
-
         private void button4_Click(object sender, EventArgs e)
         {
             var addProductForm = new AddProductForm();
             addProductForm.Show();
             addProductForm.FormClosed += ReloadTable;
         }
-
         private void ReloadTable(object sender, FormClosedEventArgs e)
         {
             ReloadTable();
         }
-
         private void button6_Click(object sender, EventArgs e)
         {
             var addClientProduct = new AddClientForm();
             addClientProduct.Show();
             addClientProduct.FormClosed += ReloadTable;
         }
-
         private void button7_Click(object sender, EventArgs e)
         {
             using (var Repository = new SnusDb())
@@ -129,7 +112,6 @@ namespace EntityFramework_lb2
                 }
             }
         }
-
         private void button5_Click(object sender, EventArgs e)
         {
             using (var Repository = new SnusDb())
@@ -159,60 +141,75 @@ namespace EntityFramework_lb2
             }
 
         }
-
-
         private void button1_Click_2(object sender, EventArgs e)
         {
-            var predicate = FilterManager.GetFilterPredicate<Product>(new 
+            try
             {
-                id = tbId.Text, 
-                name = tbName.Text,
-                description = tbDescription.Text,
-                countStart = (int)nudCountStart.Value,
-                countEnd = (int)nudCountEnd.Value,
-                type = cbType.SelectedItem,
-                priceStart = nudPriceStart.Value,
-                priceEnd = nudPriceEnd.Value,
-                nicotineStart = (int)nudNicotineStart.Value,
-                nicotineEnd = (int)nudNicotineEnd.Value,
-                ratingStart = (int)nudRateStart.Value,
-                ratingEnd = (int)nudRateEnd.Value
-            });
-            
-            ReloadTable(predicate);
+                var predicate = FilterManager.GetFilterPredicate<Product>(new
+                {
+                    id = tbId.Text,
+                    name = tbName.Text,
+                    description = tbDescription.Text,
+                    countStart = (int)nudCountStart.Value,
+                    countEnd = (int)nudCountEnd.Value,
+                    priceStart = nudPriceStart.Value,
+                    priceEnd = nudPriceEnd.Value,
+                    nicotineStart = (int)nudNicotineStart.Value,
+                    nicotineEnd = (int)nudNicotineEnd.Value,
+                    ratingStart = (int)nudRateStart.Value,
+                    ratingEnd = (int)nudRateEnd.Value
+                });
+                ReloadTable(predicate);
+            }
+            catch(Exception exc)
+            {
+                MessageBox.Show("Some Invalide Values.\n More: " + exc.Message);
+            }       
         }
-
-       
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label22_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
-            var predicate = FilterManager.GetFilterPredicate<Users>(new
+            try
             {
-                id = tbId2.Text,
-                firstName = tbFirstName.Text,
-                secondName = tbSecondName.Text,
-                ageStart = (Nullable<int>)nudAgeStart.Value,
-                ageEnd = (Nullable<int>)nudAgeEnd.Value,
-                role = cbRole.SelectedItem !=null ? cbRole.SelectedItem.ToString() : null,
-                sex = tbSex.Text,
-                email = tbEmail.Text
-            });
-            ReloadTable(null, predicate);
+                var predicate = FilterManager.GetFilterPredicate<Users>(new
+                {
+                    id = tbId2.Text,
+                    firstName = tbFirstName.Text,
+                    secondName = tbSecondName.Text,
+                    ageStart = (Nullable<int>)nudAgeStart.Value,
+                    ageEnd = (Nullable<int>)nudAgeEnd.Value,
+                    role = cbRole.SelectedItem != null ? cbRole.SelectedItem.ToString() : null,
+                    sex = tbSex.Text,
+                    email = tbEmail.Text
+                });
+                ReloadTable(null, predicate);
+            }
+            catch(Exception exc)
+            {
+                MessageBox.Show("Some Invalide Values.\n More: " + exc.Message);
+            }
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            btnCommentAdd.Enabled = true;
+        }
+
+        private void dataGridView1_RowLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            //btnCommentAdd.Enabled = false;
+        }
+
+        private void btnCommentAdd_Click(object sender, EventArgs e)
+        {
+            var id = (int)dataGridView1.SelectedRows[0].Cells[0].Value;
+            var form = new AddCommentsForm(id);
+            form.Show();
+            form.FormClosed += ReloadTable;
         }        
     }
 }

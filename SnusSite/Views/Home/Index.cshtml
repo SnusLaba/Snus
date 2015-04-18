@@ -1,0 +1,28 @@
+﻿@model SnusSite.Models.Home.IndexModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/makisu")
+    <script type="text/javascript">
+        if ($.fn.makisu.enabled) {
+            var $sashimi = $('.sashimi');
+            var $nigiri = $('.nigiri');
+            
+            // Create Makisus
+            $nigiri.makisu({
+                selector: 'dd',
+                overlap: 0.85,
+                speed: 1.7,
+                shading: null,
+                perspective: null
+            });
+           
+            $('.list').makisu('open');
+        }
+    </script>
+}

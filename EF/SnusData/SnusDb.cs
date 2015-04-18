@@ -24,7 +24,14 @@ namespace SnusData.Entitys
 
         public void Save()
         {
-            SaveChanges();
+            try
+            {
+                SaveChanges();
+            }
+            catch(Exception e)
+            {
+
+            }
         }
 
     }

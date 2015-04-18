@@ -13,7 +13,8 @@ namespace SnusData.Attributes
         ContainsFilterIn = 2,
         IntervalStart = 3,
         IntervalEnd = 4,
-        Equal = 5
+        Equal = 5,
+        Down = 6
     }
     [System.AttributeUsage(System.AttributeTargets.Struct | AttributeTargets.Property, AllowMultiple=true)]
     public class FilterAttribute : Attribute

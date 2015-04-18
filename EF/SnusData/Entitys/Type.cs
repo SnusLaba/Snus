@@ -1,3 +1,4 @@
+using SnusData.Attributes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -10,9 +11,13 @@ namespace SnusData.Entitys
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-
-        [StringLength(10)]
+        [Filter(FilterFlag.ContainsFilterIn, "name")]
+        
         public string Name { get; set; }
+        public override string ToString()
+        {
+            return Name;
+        }
     }
     public class FileType : Type
     {

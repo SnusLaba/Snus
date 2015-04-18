@@ -19,12 +19,12 @@ namespace SnusData.Entitys
         public int Id {get;set;}
 
         [Required]
-        [StringLength(10)]
+        
         [Filter(FilterFlag.ContainsFilterIn, "firstName")]
         public string FirstName { get; set; }
 
         
-        [StringLength(10)]
+        
         [Filter(FilterFlag.ContainsFilterIn, "secondName")]
         public string SecondName { get; set; }
 
@@ -37,17 +37,17 @@ namespace SnusData.Entitys
         [Filter(FilterFlag.Equal, "role")]
         public virtual Roles Role { get; set; }
 
-        [StringLength(10)]
+        
         [Filter(FilterFlag.ContainsFilterIn, "sex")]
         public string Sex { get; set; }
 
        
-        [StringLength(10)]
+        
         [Filter(FilterFlag.ContainsFilterIn, "email")]
         public string Email { get; set; }
 
    
-        [StringLength(10)]
+        
         [Filter(FilterFlag.ContainsFilterIn, "password")]
         public string Password { get; set; }
 

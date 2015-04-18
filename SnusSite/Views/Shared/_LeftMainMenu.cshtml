@@ -1,0 +1,11 @@
+﻿@model SnusSite.Models.General.MenuModel
+
+<section class="demo">
+    <dl class="list nigiri">
+        <dt>@Model.Title</dt>
+        @foreach (var item in Model.Items)
+        {
+            <dd><a href="@item.Reference">@item.Name</a></dd>
+        }
+    </dl>
+</section>

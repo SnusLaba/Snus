@@ -65,6 +65,12 @@
     <Compile Include="AddClientForm.Designer.cs">
       <DependentUpon>AddClientForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddCommentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCommentsForm.Designer.cs">
+      <DependentUpon>AddCommentsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddClientForm.resx">
       <DependentUpon>AddClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCommentsForm.resx">
+      <DependentUpon>AddCommentsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddProductForm.resx">
       <DependentUpon>AddProductForm.cs</DependentUpon>

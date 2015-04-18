@@ -13,7 +13,7 @@ namespace SnusData.Entitys
         public long Id { get; set; }
 
         
-        [StringLength(10)]
+        
         public string Create_Date { get; set; }
         public int UserId { get; set; }
         public Users User { get; set; }
